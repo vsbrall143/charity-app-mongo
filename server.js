@@ -53,8 +53,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Register routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/charities', charityRoutes);
-app.use('/api/donations', donationRoutes);
+app.use(charityRoutes);
+app.use('/donations', donationRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/notifications', notificationRoutes);
 
