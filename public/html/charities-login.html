@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>charity-Login</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="profile.html"><div  href="charity-dashboard.html" class="logo">charitify</div></a>
+    <ul class="nav-links">
+
+        <li><a href="login.html">login</a> </li>
+        <li><a href="register.html">Register</a> </li>
+        <li><a href="charities-login.html">login Charities</a></li>
+        <li><a href="charities-register.html">register Charities</a></li>
+        <!-- <li><a href="charities.html">View Charities</a></li> -->
+ 
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+  <main class="container">
+    <form id="charity-loginForm">
+      <h1><label for="email">Email:</label></h1>
+      <input type="email" id="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </main>
+  <script src="../js/charity-auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charities</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+  <nav class="navbar">
+    <a href="profile.html"><div  href="charity-dashboard.html" class="logo">charitify</div></a>
+    <ul class="nav-links">
+
+       <h1><li><a href="admin.html">charities</a></li></h1> 
+        <li><a href="approve.html">unapproved charities</a> </li>
+        <li><a href="adminprofile.html">profile</a></li>
+        <li><a href="allcharityhistory.html">charity history</a></li>
+        <li><a onclick="logout()">logout</a></li>
+        <!-- <li><a href="charities.html">View Charities</a></li> -->
+ 
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+<main class="container">
+  <div id="charityList" class="grid-container"></div>
+  <div id="projectListContainer" class="hidden">
+    <button onclick="closeProjects()">Close</button>
+    <div id="projectList" class="grid-container"></div>
+  </div>
+</main>
+
+
+  <!-- <main class="container">
+    <div id="charityList"></div>
+   
+  </main> -->
+  <script src="../js/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

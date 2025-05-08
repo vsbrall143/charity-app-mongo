@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+  <main class="container">
+    <form id="add-projectForm" enctype="multipart/form-data">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required>
+    
+      <label for="description">Description:</label>
+      <input type="text" id="description" required>
+    
+      <label for="target">target:</label>
+      <input type="target" id="target" required>
+
+      <label for="current">current</label>
+      <input type="current" id="current" required>
+    
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" accept="image/*" required>
+    
+      <button type="submit">Add Project</button>
+    </form>
+    
+    
+  </main>
+  <script src="../js/add-project.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

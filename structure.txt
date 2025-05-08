@@ -1,0 +1,50 @@
+charity-donation-platform/
+├── config/
+│   ├── db.js               # Database connection configuration
+│   ├── jwtConfig.js        # JWT configuration and helpers
+│   ├── emailConfig.js      # SendGrid configuration
+│   ├── paymentConfig.js    # Payment gateway configuration (Stripe/Razorpay)
+│   └── env.js              # Environment variables configuration
+├── controllers/
+│   ├── authController.js   # Authentication-related APIs (register, login, etc.)
+│   ├── userController.js   # User profile and donation history APIs
+│   ├── charityController.js # Charity profile and projects APIs
+│   ├── donationController.js # Donation process and tracking APIs
+│   ├── adminController.js  # Admin dashboard APIs
+│   └── notificationController.js # Email notification logic
+├── middlewares/
+│   ├── authMiddleware.js   # Middleware for authentication and JWT verification
+│   ├── adminMiddleware.js  # Middleware for checking admin permissions
+│   └── errorMiddleware.js  # Centralized error handling
+├── models/
+│   ├── User.js             # User model
+│   ├── Charity.js          # Charity model
+│   ├── Donation.js         # Donation model
+│   ├── Project.js          # Charity project model
+│   └── Admin.js            # Admin model
+├── routes/
+│   ├── authRoutes.js       # Routes for authentication (login, register)
+│   ├── userRoutes.js       # Routes for user-related endpoints
+│   ├── charityRoutes.js    # Routes for charity-related endpoints
+│   ├── donationRoutes.js   # Routes for donation processes
+│   ├── adminRoutes.js      # Routes for admin-specific endpoints
+│   └── notificationRoutes.js # Routes for notifications
+├── services/
+│   ├── emailService.js     # Logic for sending emails using SendGrid
+│   ├── paymentService.js   # Payment gateway integration logic
+│   └── reportService.js    # Logic for generating impact reports
+├── utils/
+│   ├── responseHelper.js   # Helper functions for creating API responses
+│   ├── validationHelper.js # Request validation helpers
+│   └── logger.js           # Logging utilities
+├── tests/
+│   ├── auth.test.js        # Unit tests for authentication
+│   ├── user.test.js        # Unit tests for user APIs
+│   ├── charity.test.js     # Unit tests for charity APIs
+│   ├── donation.test.js    # Unit tests for donation APIs
+│   └── admin.test.js       # Unit tests for admin functionalities
+├── .env                    # Environment variables file
+├── .gitignore              # Files and directories to ignore in Git
+├── package.json            # Project dependencies and metadata
+├── README.md               # Project documentation
+└── server.js               # Entry point of the application

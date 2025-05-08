@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity-dashboard</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <a href="profile.html"><div  href="charity-dashboard.html" class="logo">charitify</div></a>
+    <ul class="nav-links">
+
+        <li><a href="add-project.html">add project</a></li>
+        <li><a href="charityprofile.html">profile</a></li>
+        <li><a onclick="logout()">logout</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+
+ 
+    
+        <h1 id="project-heading">projects</h1>
+ 
+    <div id="projectList"></div>
+ 
+  <script src="../js/charity-dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
