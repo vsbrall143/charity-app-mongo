@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       const token = localStorage.getItem('token'); // Fetch token for authentication
   
-      const response = await axios.get('http://localhost:3000/donations/allhistory', {
+      const response = await axios.get('https://charity-app-3giw.onrender.com/donations/allhistory', {
         headers: { Authorization: token }
       });
   

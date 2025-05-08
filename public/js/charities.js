@@ -9,7 +9,7 @@ async function fetchCharities() {
   const queryString = urlParams.toString(); // Convert filters into query parameters
 
   try {
-    const response = await axios.get(`http://localhost:3000/allcharities?${queryString}`);
+    const response = await axios.get(`https://charity-app-3giw.onrender.com/allcharities?${queryString}`);
     displayCharities(response.data); // Display fetched charities
   } catch (err) {
     console.error(err);
@@ -112,7 +112,7 @@ async function loadProjects(charityId) {
   projectListContainer.classList.remove("hidden"); // Show projects
 
   try {
-    const response = await axios.get(`http://localhost:3000/allprojects/${charityId}`);
+    const response = await axios.get(`https://charity-app-3giw.onrender.com/allprojects/${charityId}`);
     const projects = response.data;
 
     if (projects.length > 0) {
@@ -173,7 +173,7 @@ async function donate(projectid, charityid) {
     }
 
     const token = localStorage.getItem('token');
-    const response = await axios.get(`http://localhost:3000/donations/donation/${amount * 100}/${projectid}/${charityid}`, {
+    const response = await axios.get(`https://charity-app-3giw.onrender.com/donations/donation/${amount * 100}/${projectid}/${charityid}`, {
       headers: { Authorization: token }
     });
 
@@ -182,7 +182,7 @@ async function donate(projectid, charityid) {
       "order_id": response.data.order.id, 
       "handler": async function (response) {
         try {
-          await axios.post(`http://localhost:3000/donations/updateTransactionStatus/${amount}/${projectid}/${charityid}`, {
+          await axios.post(`https://charity-app-3giw.onrender.com/donations/updateTransactionStatus/${amount}/${projectid}/${charityid}`, {
             order_id: options.order_id,
             payment_id: response.razorpay_payment_id,
           }, { headers: { "Authorization": token } });

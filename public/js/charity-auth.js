@@ -11,7 +11,7 @@ if (loginForm) {
  
     try {
       // Make POST request to login endpoint
-      const res = await axios.post('http://localhost:3000/api/auth/charitylogin', { email, password }); 
+      const res = await axios.post('https://charity-app-3giw.onrender.com/api/auth/charitylogin', { email, password }); 
       console.log(res);
       // Store the token in localStorage (or cookies)
       localStorage.setItem('charitytoken', res.data.charitytoken); 
@@ -43,7 +43,7 @@ if (registerForm) {
 
     try {
       // Make POST request to registration endpoint
-      const res = await axios.post('http://localhost:3000/api/auth/charityregister', { 
+      const res = await axios.post('https://charity-app-3giw.onrender.com/api/auth/charityregister', { 
         name, 
         email, 
         password, 

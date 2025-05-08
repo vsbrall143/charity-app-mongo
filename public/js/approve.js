@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const charityList = document.getElementById('charityList');
 
   try {
-    const response = await axios.get('http://localhost:3000/unapprovedcharities');
+    const response = await axios.get('https://charity-app-3giw.onrender.com/unapprovedcharities');
     const charities = response.data; // Assuming the response is an array of charities
 
     if (charities.length > 0) {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     projectList.innerHTML = ""; // Clear existing project list
   
     try {
-      const response = await axios.get('http://localhost:3000/unapprovedprojects');
+      const response = await axios.get('https://charity-app-3giw.onrender.com/unapprovedprojects');
       const projects = response.data; // Assuming the response is an array of projects
       console.log(response.data);
       if (projects.length > 0) {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function approveCharity(charityId) {
     try {
       const token = localStorage.getItem('token'); // Get token from local storage
-      await axios.post(`http://localhost:3000/approvecharity/${charityId}`,   {  headers: { Authorization: token } });
+      await axios.post(`https://charity-app-3giw.onrender.com/approvecharity/${charityId}`,   {  headers: { Authorization: token } });
   
       alert('Charity approved successfully!');
       // Refresh project list (consider using a more efficient method like DOM manipulation)

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const charityList = document.getElementById('charityList');
 
   try {
-    const response = await axios.get('http://localhost:3000/allcharities');
+    const response = await axios.get('https://charity-app-3giw.onrender.com/allcharities');
     const charities = response.data; // Assuming the response is an array of charities
 
     if (charities.length > 0) {
@@ -43,7 +43,7 @@ async function loadProjects(charityId) {
   projectListContainer.classList.remove("hidden"); // Show projects
 
   try {
-    const response = await axios.get(`http://localhost:3000/allprojects/${charityId}`);
+    const response = await axios.get(`https://charity-app-3giw.onrender.com/allprojects/${charityId}`);
     const projects = response.data;
 
     if (projects.length > 0) {
@@ -88,7 +88,7 @@ async function deleteProject(projectid) {
  
   try {
     const token = localStorage.getItem('token'); // Get token from local storage
-    const res = await axios.delete(`http://localhost:3000/deleteproject/${projectid}`, {  headers: { Authorization: token } });
+    const res = await axios.delete(`https://charity-app-3giw.onrender.com/deleteproject/${projectid}`, {  headers: { Authorization: token } });
 
     alert('Project deleted successfully!');
 

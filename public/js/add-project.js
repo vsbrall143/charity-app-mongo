@@ -3,7 +3,7 @@ const registerForm = document.getElementById('add-projectForm');
 if (registerForm) {
   registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
+   
     const formData = new FormData();
     formData.append('title', document.getElementById('title').value);
     formData.append('description', document.getElementById('description').value);
@@ -13,7 +13,7 @@ if (registerForm) {
 
     try {
       const token = localStorage.getItem('charitytoken'); // Get token from local storage
-      const res = await axios.post('http://localhost:3000/addproject', formData, {headers: { Authorization: token }});
+      const res = await axios.post('https://charity-app-3giw.onrender.com/addproject', formData, {headers: { Authorization: token }});
 //Since formData contains a file, Axios automatically sets the Content-Type to multipart/form-data.
        
       window.location.href = 'charity-dashboard.html'; // Redirect

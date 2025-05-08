@@ -36,7 +36,7 @@ async function loadProjects() {
 
 
   try {
-    const response = await axios.get(`http://localhost:3000/allprojects/${charityid}`);
+    const response = await axios.get(`https://charity-app-3giw.onrender.com/allprojects/${charityid}`);
     const projects = response.data; // Assuming the response is an array of projects
 
     if (projects.length > 0) {

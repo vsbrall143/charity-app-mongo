@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch user details from backend
-        const response = await axios.get("http://localhost:3000/api/auth/profile", {
+        const response = await axios.get("https://charity-app-3giw.onrender.com/api/auth/profile", {
             headers: { Authorization: token },
         });
         console.log(response);
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
 
         try {
-            const updateResponse = await axios.put("http://localhost:3000/api/auth/profile", updatedUser, {
+            const updateResponse = await axios.put("https://charity-app-3giw.onrender.com/api/auth/profile", updatedUser, {
                 headers: { Authorization: token },
             });
 
