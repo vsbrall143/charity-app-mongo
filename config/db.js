@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // MongoDB connection URI from environment variables
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = "mongodb+srv://vsbrall143:W0W2B89XycbaI7Tv@server.gwe8o.mongodb.net/?retryWrites=true&w=majority&appName=server"
 
 // Mongoose connection options
 const options = {
